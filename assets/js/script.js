@@ -4,14 +4,14 @@ var fiveDayEl=document.getElementById("five-day")
 var searchInputEl=document.getElementById('search-input')
 var searchBtnEl=document.getElementById("search-btn")
 var sectionBtnEl=document.getElementById("historyBtn")
-var historyArr =   JSON.parse(localStorage.getItem("history"))  ||  []
+var historyArr = JSON.parse(localStorage.getItem("history"))  ||  []
 
 displayHistory()
 
 function displayHistory(){
     sectionBtnEl.innerHTML=""
      for(var i =0; i < historyArr.length; i++){
-        sectionBtnEl.innerHTML=sectionBtnEl.innerHTML+`    <button type="button" class="btn bg-secondary w-100 mx-3 my-1">${historyArr[i]}</button>`
+        sectionBtnEl.innerHTML=sectionBtnEl.innerHTML+`<button type="button" class="btn bg-secondary w-100 mx-3 my-1">${historyArr[i]}</button>`
      }
 }
 
@@ -49,9 +49,9 @@ function currentWeather(cityName){
 
         dashboardEl.innerHTML=`
         <h3>${data.name} (${dayjs.unix(data.dt).format("MM/DD/YYYY")}) <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt=""></h3>
-        <p>Temp: 75 F</p>
-        <p>Wind: 8.43 MPH</p>
-        <p>Humidity: 44%</p>
+        <p>Temp: ${data.main.temp}&deg</p>
+        <p>Wind: ${data.wind.speed}MPH</p>
+        <p>Humidity: ${data.main.humidity}%</p>
         `
      
 

@@ -1,3 +1,19 @@
-.custom-bg-color{
-    background-color: indigo !important;
+/* adds proper spacing to the main-content and left-bar sections, and also adds mobile responsiveness for smaller screens */
+
+.main-content {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+
+@media (max-width: 768px) {
+    body, .main-content {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+.left-bar {
+   padding-top: 3%;
 }
