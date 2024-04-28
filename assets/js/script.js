@@ -5,6 +5,9 @@ var searchInputEl = document.getElementById('search-input');
 var searchBtnEl = document.getElementById("search-btn");
 var sectionBtnEl = document.getElementById("historyBtn");
 var historyArr = JSON.parse(localStorage.getItem("history")) || [];
+var clearHistoryEl = document.getElementById("clear-history");
+
+clearHistoryEl.addEventListener("click", clearHistory);
 
 displayHistory();
 
@@ -92,3 +95,10 @@ function search() {
 }
 
 searchBtnEl.addEventListener("click", search);
+
+function clearHistory() {
+    localStorage.removeItem('history');
+    historyArr= [];
+    displayHistory();
+}
+
