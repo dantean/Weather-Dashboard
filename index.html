@@ -4,99 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">    
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <header class="row custom-bg-color bg-primary bg-gradient text-light ">
-        <h2 class="col-12 text-center">Weather Dashboard</h2>
+    <header class="section has-background-primary has-text-light">
+        <h2 class="title has-text-centered">Weather Dashboard</h2>
     </header>
 
-    <main class="row">
-        <section class="col-3">
+    <main class="columns">
+        <section class="column is-one-quarter">
             <h4 class="px-3">Search for a city:</h4>
-            <input id="search-input" type="text" class="form-control mx-3">
+            <input id="search-input" type="text" class="input mx-3">
 
-            <button id="search-btn" type="button" class="btn bg-primary w-100 mx-3 my-1">Search</button>
+            <button id="search-btn" type="button" class="button is-primary is-fullwidth mx-3 my-1">Search</button>
             <section id="historyBtn">
-                <button type="button" class="btn bg-secondary w-100 mx-3 my-1">Chicago</button>
-                <button type="button" class="btn bg-secondary  w-100 mx-3 my-1">Miami</button>
-                <button type="button" class="btn bg-secondary  w-100 mx-3 my-1">Orlando</button>
-                <button type="button" class="btn bg-secondary  w-100 mx-3 my-1">New York</button>
+                <button type="button" class="button is-secondary is-fullwidth mx-3 my-1">Chicago</button>
+                <button type="button" class="button is-secondary is-fullwidth mx-3 my-1">Miami</button>
+                <button type="button" class="button is-secondary is-fullwidth mx-3 my-1">Orlando</button>
+                <button type="button" class="button is-secondary is-fullwidth mx-3 my-1">New York</button>
             </section>
-            
         </section>
-        <section class="col-9">
-            <article class="row border border-black  w-100 my-1">
-                <section class="col-12" id="dashboard">
-                    <h3>Miami (1/129/2024) <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h3>
+        <section class="column">
+            <article class="box">
+                <section id="dashboard">
+                    <h3 class="title is-3">Miami (1/129/2024) <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h3>
                     <p>Temp: 75 F</p>
                     <p>Wind: 8.43 MPH</p>
                     <p>Humidity: 44%</p>
                 </section>
             </article>
-            <h3>5 Day Forecast</h3>
+            <h3 class="title is-3">5 Day Forecast</h3>
 
-            <div class="row" id="five-day">
-                <div class="col-sm-2 mb-3 mb-sm-0">
+            <div class="columns">
+                <div class="column">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-content">
+                            <h5 class="title is-5">Special title treatment</h5>
+                            <p>With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="button is-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="column">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-content">
+                            <h5 class="title is-5">Special title treatment</h5>
+                            <p>With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="button is-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="column">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-content">
+                            <h5 class="title is-5">Special title treatment</h5>
+                            <p>With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="button is-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="column">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-content">
+                            <h5 class="title is-5">Special title treatment</h5>
+                            <p>With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="button is-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="column">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="card-content">
+                            <h5 class="title is-5">Special title treatment</h5>
+                            <p>With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="button is-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-</body>
-
-</html>
+    <script src=".assets/js/script.js"></script>
+    </body>
+    </html>

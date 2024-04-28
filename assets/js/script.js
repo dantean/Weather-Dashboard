@@ -24,6 +24,11 @@ function populateData(event){
 }
 
 sectionBtnEl.addEventListener("click", populateData)
+searchInputEl.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        search();
+    }
+})
 
 function currentWeather(cityName){
     var url=`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`
