@@ -65,26 +65,7 @@ function fiveForecast(cityName){
         console.log(data)
         fiveDayEl.textContent=""
 
-        /*
-            <div class="col-sm-2 mb-3 mb-sm-0">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">1/30/2024</h5>
-                            <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                            <p class="card-text">
-                             temp: 35F
-                            </p>
-                            <p class="card-text">
-                             humidity:
-                            </p>
-                           
-                              <p class="card-text">
-                             wind:
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        */
+
         for(var i=3; i <data.list.length;i=i+8){
             var fiveDayArr=data.list
             console.log(fiveDayArr[i])
