@@ -46,5 +46,5 @@ Github Repository: https://github.com/dantean/Weather-Dashboard
 ## Credit Where Credit Is Due
 
 - Instructor Phil once again, for going over 90% of how to do this in class recordings which I had to re-watch to finish this
-- ChatGPT for fixing my syntax errors and helping to suggest fixes in my code whenever I broke something, and reminding me to make my webpage mobile responsive when I kept forgetting to do so
+- ChatGPT for fixing my syntax errors and helping to suggest fixes in my code whenever I broke something, and giving me sample code for the "clear history" function. 
 - My nephew Giovanni, for helping to keep me motivated to push through these assignments
