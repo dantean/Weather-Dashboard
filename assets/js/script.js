@@ -66,25 +66,23 @@ function fiveForecast(cityName) {
         })
         .then(function (data) {
             console.log(data);
-            var forecastContainer = document.querySelector(".columns.is-multiline"); 
+            var forecastContainer = document.querySelector(".columns.is-multiline");
             forecastContainer.innerHTML = "";
-
-            data.list.forEach((forecast, index) => {
-                if (index % 3 === 0) { 
-                    forecastContainer.innerHTML += `
-                    <div class="column is-one-fifth">
-                        <div class="card">
-                            <div class="card-content">
-                                <h5 class="title is-5">${new Date(forecast.dt * 1000).toLocaleDateString("en-US")} <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png"></h5>
-                                <p>Temp: ${forecast.main.temp}°F</p>
-                                <p>Wind: ${forecast.wind.speed} MPH</p>
-                                <p>Humidity: ${forecast.main.humidity}%</p>
-                            </div>
+            for (let i = 4; i < data.list.length; i += 8) { 
+                let forecast = data.list[i];
+                forecastContainer.innerHTML += `
+                <div class="column is-one-fifth">
+                    <div class="card">
+                        <div class="card-content">
+                            <h5 class="title is-5">${new Date(forecast.dt * 1000).toLocaleDateString("en-US")} <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png"></h5>
+                            <p>Temp: ${forecast.main.temp.toFixed(1)}°F</p>
+                            <p>Wind: ${forecast.wind.speed.toFixed(1)} MPH</p>
+                            <p>Humidity: ${forecast.main.humidity}%</p>
                         </div>
                     </div>
-                    `;
-                }
-            });
+                </div>
+                `;
+            }
         });
 }
 
